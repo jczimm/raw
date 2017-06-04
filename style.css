@@ -1,0 +1,79 @@
+.cards-grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+.card {
+  background-color: #ddd;
+  width: calc(50% - 0.75em);
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding: 1.5em;
+}
+
+.card button {
+  color: #444;
+  cursor: pointer;
+}
+
+.card button.ctabutton {
+  margin-top: 1em;
+  font-weight: 600;
+}
+
+.cards-grid .card:nth-child(odd) {
+  margin-right: 0.75em;
+}
+
+.cards-grid .card:nth-child(even) {
+  margin-left: 0.75em;
+}
+
+@media (max-width: 8in) {
+  .cards-grid .card:nth-child(odd), .cards-grid .card:nth-child(even) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+  }
+}
+
+footer {
+  margin-top: 70px;
+  font-size: 0.75em;
+  color: #777;
+  text-align: center;
+}
+
+/* Utilities */
+.-basestripe {
+  border-bottom: 10px solid #bbb;
+}
+
+.-sans-serif {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* element customization */
+button.round {
+  border-radius: 6px;
+}
+
+h2 > a {
+  border-bottom: 1px dotted currentColor;
+}
+
+h2 > a, h2 > a:hover, h2 > a:active, h2 > a:focus, h2 > a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
+
+h2 > a:hover, h2 > a:active, h2 > a:focus {
+  border-bottom: 1px solid transparent;
+}
+
+blockquote {
+  margin-left: 0;
+  border-left: 0.4em solid currentColor;
+  padding-left: 0.5em;
+}
